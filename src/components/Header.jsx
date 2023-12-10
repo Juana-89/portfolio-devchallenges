@@ -1,7 +1,6 @@
 import React from 'react'
 import { Layout, Button, Card, Flex, Typography, Descriptions } from 'antd';
 import { MailOutlined, PhoneOutlined } from '@ant-design/icons';
-const { Header, Footer, Sider, Content } = Layout;
 
 // const headerStyle = {
 //     textAlign: 'center',
@@ -33,7 +32,6 @@ const { Header, Footer, Sider, Content } = Layout;
 const cardStyle = {
   width: 1046,
   margin: 'auto'
- 
 };
 
 const imgStyle = {
