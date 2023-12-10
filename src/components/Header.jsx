@@ -30,7 +30,7 @@ import { MailOutlined, PhoneOutlined } from '@ant-design/icons';
   };
 
 const cardStyle = {
-  width: 1046,
+  width: 1051,
   margin: 'auto'
 };
 
@@ -72,7 +72,7 @@ const Nav = () => {
             > 
             <div style= {{display: 'flex', justifyContent: 'space-around', gap:400}}>
               <div>
-                <Typography.Title level={4} style= {{marginBottom: 0 }}>
+                <Typography.Title level={4} style= {{ marginTop: 30, marginBottom:0 }}>
                 Juana Llanje
                 </Typography.Title>
                 <Typography.Title level={5} style= {{marginTop: 0, fontWeight: 'lighter'}}>
