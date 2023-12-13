@@ -18,7 +18,7 @@ const App = () => (
       <Nav/>
       <ContentBody/>
       <FilterProjects/>
-
+      <Footer />  
     </Layout>
     </Space>
 
