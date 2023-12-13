@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, Flex, Typography, Progress, Image } from 'antd';
 import Adidas from '../assets/Adidas_Logo.svg.png';
 import HyM from '../assets/H&M-Logo.svg.png';
+import Footer from './Footer'
 
 const ContentBody = () => {
   const cardStyle = {
@@ -152,11 +153,10 @@ const ContentBody = () => {
                     <p style={{marginBottom: 20, fontWeight:'bold'}}>Full-stack developer</p>
                     <p style={{marginBottom: 60}}>Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.</p>
                   </Flex>
-              </Flex>
-            
-          
-        </Card>
-    </Flex></Flex>
+                </Flex>
+              </Card>
+          </Flex>      
+    </Flex>
   )
 }
 

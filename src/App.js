@@ -1,10 +1,10 @@
 import React from 'react';
-import { Layout, Space, Button } from 'antd';
+import { Layout, Space } from 'antd';
 import Nav from './components/Header.jsx';
 import ContentBody from './components/Content.jsx';
 import FilterProjects from './components/Filter.jsx';
+import Footer from './components/Footer.jsx';
 import './App.css';
-// const { Header, Footer, Sider, Content } = Layout;
 
 const App = () => (
   <Space
@@ -18,9 +18,7 @@ const App = () => (
       <Nav/>
       <ContentBody/>
       <FilterProjects/>
-      {/* <Header style={headerStyle}>Header</Header>
-      <Content style={contentStyle}>Content</Content>
-      <Footer style={footerStyle}>Footer</Footer> */}
+
     </Layout>
     </Space>
 
