@@ -1,33 +1,6 @@
 import React from 'react'
-import { Layout, Button, Card, Flex, Typography, Descriptions } from 'antd';
+import { Layout, Card, Flex, Typography, Descriptions } from 'antd';
 import { MailOutlined, PhoneOutlined } from '@ant-design/icons';
-
-// const headerStyle = {
-//     textAlign: 'center',
-//     width: 1046,
-//     margin: '0 auto',
-//     backgroundColor: 'transparent',
-//   };
-  const contentStyle = {
-    textAlign: 'center',
-    minHeight: 120,
-    lineHeight: '120px',
-    color: '#fff',
-    backgroundColor: '#108ee9',
-    
-  };
-
-  const siderStyle = {
-    textAlign: 'center',
-    lineHeight: '120px',
-    color: '#fff',
-    backgroundColor: '#3ba0e9',
-  };
-  const footerStyle = {
-    textAlign: 'center',
-    color: '#fff',
-    backgroundColor: '#7dbcea',
-  };
 
 const cardStyle = {
   width: 1051,
@@ -57,8 +30,9 @@ const Nav = () => {
           padding: 0,
           overflow: 'hidden',
         }}
+        className='ant-card-layout'
     >
-        <Flex justify="space-between">
+        <Flex justify="space-between" className='ant-card'>
           <img
               alt="avatar"
               src="https://cdn.pixabay.com/photo/2014/12/16/22/25/woman-570883_1280.jpg"
@@ -69,8 +43,9 @@ const Nav = () => {
             vertical
             align="flex-start"
             justify="space-between"
+            className='ant-card-text'
             > 
-            <div style= {{display: 'flex', justifyContent: 'space-around', gap:400}}>
+            <div style= {{display: 'flex', justifyContent: 'space-around', gap:400}}  className='ant-card-title'>
               <div>
                 <Typography.Title level={4} style= {{ marginTop: 30, marginBottom:0 }}>
                 Juana Llanje
@@ -81,8 +56,10 @@ const Nav = () => {
               </div>
               <Flex 
               vertical 
+             
               >
-                <div style={{marginTop:30 }}>
+                <div style={{marginTop:30 }}
+                   className='ant-card-email'>
                   <MailOutlined /> juanalcez88@gmail.com
                 </div>
                 <div>

@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, Flex, Typography, Progress, Image } from 'antd';
 import Adidas from '../assets/Adidas_Logo.svg.png';
 import HyM from '../assets/H&M-Logo.svg.png';
-import Footer from './Footer'
 
 const ContentBody = () => {
   const cardStyle = {
@@ -42,12 +41,14 @@ const ContentBody = () => {
     borderRadius: 8
   }
   return (
-    <Flex horizontal justify="center" style={{marginTop: 20}}>
+    <Flex horizontal justify="center" style={{marginTop: 20}} className="ant-card-content">
       <Flex vertical>
         {/* Card Frontend */}
         <Card
           hoverable
           style={cardStyle}
+          className="ant-card-skills"
+     
           >
           <Typography.Title level={4} style= {{marginBottom: 10, marginTop:5 }}>
             FRONT END
@@ -65,6 +66,7 @@ const ContentBody = () => {
         <Card
           hoverable
           style={cardStyleHobbies}
+          className="ant-card-hobbies"
           >
             <Flex vertical>
               <Typography.Title level={4} style= {{marginBottom: 20, marginTop:5 }}>

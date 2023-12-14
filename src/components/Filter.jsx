@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Card, Flex, Typography, Button, Pagination } from 'antd';
+import { Card, Flex, Typography, Button, Pagination, Layout } from 'antd';
+import FooterPage from './Footer.jsx';
 import {projects} from '../assets/data/data.js'
-
+const { Footer } = Layout;
 const FilterProjects = () => {
 
   const cardStylesProjects = {
@@ -12,9 +13,10 @@ const FilterProjects = () => {
 
   const cardStylesSelectedProjects = {
     maxWidth: 329,
-    width:'100%',
+    width: 1048,
     height: 468,
-    marginRight: 20
+    marginRight: 20,
+    marginTop: 20
   };
 
   const paginationStyles = {
@@ -22,11 +24,22 @@ const FilterProjects = () => {
     marginTop: 20
   }
 
+  const sectionCarfStylesProject = {
+    marginTop: 20, 
+    marginLeft: -25, 
+    width: 1048
+  }
+  const footerStyle = {
+    textAlign: 'center',
+    width: '100%'
+}
   const [showTechs, setShowTechs] = useState([]);
   const [filteredTechNoRepeat, setFilteredTechNoRepeat ] = useState([])
   const [selectProject, setSelectProject] = useState(null);
   const [clickedButton, setClickedButton] = useState(null);
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+  
   useEffect(() => {
     setFilteredTechNoRepeat([...new Set(projects.map((p) => p.tech))].sort());
      setShowTechs(projects);
@@ -37,8 +50,12 @@ const FilterProjects = () => {
      setClickedButton(tech);
   }
 
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+  
   return (
-    <>
+    <Layout>
     <Flex vertical style={{marginTop: 20}}>
       <Card
       hoverable
@@ -67,10 +84,10 @@ const FilterProjects = () => {
           </div>
         ))}
         </Flex>
-        {selectProject && (
-          <Flex style={{marginTop: 20, marginLeft: -25}} gap='middle'>
+          <Flex wrap='wrap' style={sectionCarfStylesProject}>
             {showTechs
-              .filter((project) => project.tech === selectProject)
+              .filter((project) => !selectProject || project.tech === selectProject)
+              .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
               .map((project, index) => (
                 <Card key={index} style={cardStylesSelectedProjects}>
                   <img src={project.img} style={{width: '292px', height: '170px'}}/>
@@ -90,14 +107,23 @@ const FilterProjects = () => {
                 </Card>
               ))}
           </Flex>
-        )}
         <Flex style={paginationStyles}>
-          <Pagination defaultCurrent={1} total={10} responsive={true} />;
+          <Pagination
+           responsive={true}
+           defaultCurrent={1} 
+           total={showTechs
+             .filter((project) => !selectProject || project.tech === selectProject)
+             .length
+           } 
+           pageSize={itemsPerPage}
+           onChange={handlePageChange}
+           />;
         </Flex>
-      </Card>
+        <br/>
+        <FooterPage />  
+      </Card>   
     </Flex>
-
-    </>
+    </Layout>
   )
 }
 

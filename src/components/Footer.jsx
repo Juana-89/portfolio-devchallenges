@@ -1,20 +1,23 @@
 import React from 'react';
-import { Flex } from 'antd';
+import { Layout } from 'antd';
+const { Footer } = Layout;
 
 const footerStyle = {
     textAlign: 'center',
     width: '100%'
 }
 
-  const Footer = () => {
+  const FooterPage = () => {
     return (
-        <div style={footerStyle}>
+      <Layout>
+        <Footer style={footerStyle}>
             Creado por <a href="http://"><strong>Juana-89 </strong></a> <span style={{color:"red"}}>❤</span>- devChallenges.io
-        </div> 
+        </Footer>
+      </Layout>
     )
   }
   
-  export default Footer
+  export default FooterPage
   
   
   

@@ -10,3 +10,29 @@
 body {
   background-color: #f2f2f2;
 }
+
+@media only screen and (max-width: 768px) {
+
+  .ant-card-layout {
+    width: 100%;
+  }
+  .ant-card, .ant-card-title, .ant-card-content {
+    flex-direction: column;
+  }
+  .ant-card-text {
+    margin-left: 20px;
+  }
+  .ant-card-title {
+    gap: 0 !important;
+  }
+  .ant-card-email{
+    margin-top: 0 !important;
+  }
+  .ant-card-skills, .ant-card-hobbies {
+    margin: 20px 0;
+  }
+  .ant-card-hobbies img {
+    width: 100px;
+  }
+
+}
