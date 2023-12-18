@@ -14,7 +14,7 @@ body {
 @media only screen and (max-width: 768px) {
 
   .ant-card-layout {
-    width: 100%;
+    width: 100% !important;
   }
   .ant-card, .ant-card-title, .ant-card-content {
     flex-direction: column;
@@ -28,11 +28,37 @@ body {
   .ant-card-email{
     margin-top: 0 !important;
   }
-  .ant-card-skills, .ant-card-hobbies {
-    margin: 20px 0;
+  .ant-card-skills, .ant-card-hobbies, .ant-card-css  {
+    margin: 20px 0 !important;
+    width: 100% !important;
+    height: 100% !important;
   }
   .ant-card-hobbies img {
     width: 100px;
   }
-
+  .ant-image {
+    width: 100% !important;
+  }
+  .ant-flex-css{
+    flex-direction: column !important;
+  }
+  .ant-flex-filter {
+    margin-bottom: 10px !important;
+  }
+  .ant-flex-projects {
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .ant-flex-project{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .ant-image-project{
+    width: 100% !important;
+  }
+  .ant-layout-footer{
+    background-color: #fff !important;
+    padding: 0 !important;
+  }
 }

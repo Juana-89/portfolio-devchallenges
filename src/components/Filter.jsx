@@ -56,15 +56,16 @@ const FilterProjects = () => {
   
   return (
     <Layout>
-    <Flex vertical style={{marginTop: 20}}>
+    <Flex vertical style={{marginTop: 20}} className='ant-flex-css'>
       <Card
       hoverable
       style={cardStylesProjects}
+      className='ant-card-css'
       >
         <Typography.Title level={4} style= {{marginTop:5 }}>
           Projects
         </Typography.Title>
-        <Flex horizontal style={{marginBottom:50}}>
+        <Flex horizontal style={{marginBottom:50}} className='ant-flex-filter' >
         {filteredTechNoRepeat.map((project, index) => (
           <div key={index}>
             <Button 
@@ -84,13 +85,13 @@ const FilterProjects = () => {
           </div>
         ))}
         </Flex>
-          <Flex wrap='wrap' style={sectionCarfStylesProject}>
+          <Flex wrap='wrap' style={sectionCarfStylesProject} className='ant-flex-projects'>
             {showTechs
               .filter((project) => !selectProject || project.tech === selectProject)
               .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
               .map((project, index) => (
-                <Card key={index} style={cardStylesSelectedProjects}>
-                  <img src={project.img} style={{width: '292px', height: '170px'}}/>
+                <Card key={index} style={cardStylesSelectedProjects} className='ant-flex-project'>
+                  <img src={project.img} style={{width: '292px', height: '170px'}} className='ant-image-project'/>
                   {Array.isArray(project.hashtag) && (
                     <li style={{fontSize: '16px'}}> {project.hashtag.map(tag => `#${tag}`).join(' ')}</li>
                   )}

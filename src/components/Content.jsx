@@ -78,6 +78,7 @@ const ContentBody = () => {
                 width={370}
                 height={139}
                 style={imageStyle}
+                className='ant-image-hobbie'
                 />
                 <p style={{ fontSize: 18, fontWeight: 'bold', marginTop: 10 }}>Traveling</p>
                 <p>Lorem ipsum dolor sit amet, consectetur</p>
@@ -110,8 +111,9 @@ const ContentBody = () => {
         <Card
           hoverable
           style={cardStyleCSS}
+          className='ant-card-css'
           >
-            <Flex horizontal style= {{marginTop: 35}}>
+            <Flex horizontal style= {{marginTop: 35}} className='ant-flex-css'>
               <Typography.Title level={4} style= {{marginBottom: 20, marginTop:5 }}>
                 How to organize your CSS
               </Typography.Title>
@@ -132,11 +134,12 @@ const ContentBody = () => {
         <Card
           hoverable
           style={cardStyleExperiencie}
+          className='ant-card-css'
           >
             <Typography.Title level={4} style= {{marginBottom: 20, marginTop:5 }}>
                 Experiencie
             </Typography.Title>
-              <Flex horizontal style={{ marginTop: 60, marginBottom:20 }} gap='large' >
+              <Flex horizontal style={{ marginTop: 60, marginBottom:20 }} gap='large' className='ant-flex-css'>
                 <img src={Adidas}
                   style={{ width: '115px',height: '80px'}}
                 />
@@ -146,7 +149,7 @@ const ContentBody = () => {
                     <p style={{marginBottom: 60}}>Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.</p>
                   </Flex>
               </Flex>
-              <Flex horizontal gap='large' >
+              <Flex horizontal gap='large' className='ant-flex-css' >
                 <img src={HyM}
                   style={{ width: '115px',height: '80px'}}
                 />
