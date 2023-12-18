@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .ant-card-layout {
+    width: 100% !important;
+  }
+  .ant-card, .ant-card-title, .ant-card-content {
+    flex-direction: column;
+  }
+  .ant-card-text {
+    margin-left: 20px;
+  }
+  .ant-card-title {
+    gap: 0 !important;
+  }
+  .ant-card-email{
+    margin-top: 0 !important;
+  }
+  .ant-card-skills, .ant-card-hobbies, .ant-card-css  {
+    margin: 20px 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .ant-card-hobbies img {
+    width: 100px;
+  }
+  .ant-image {
+    width: 100% !important;
+  }
+  .ant-flex-css{
+    flex-direction: column !important;
+  }
+  .ant-flex-filter {
+    margin-bottom: 10px !important;
+  }
+  .ant-flex-projects {
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .ant-flex-project{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .ant-image-project{
+    width: 100% !important;
+  }
+  .ant-layout-footer{
+    background-color: #fff !important;
+    padding: 0 !important;
+  }
+}
