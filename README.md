@@ -47,9 +47,8 @@
 <br>
 
 - What was your experience? I can say you that my experience was gratifying.
-- What have you learned/improved? I practiced using tailwind class
-- Your wisdom? Tailwind classes
-
+- What have you learned/improved? I practiced using Ant design
+  
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
